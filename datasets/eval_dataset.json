@@ -1,0 +1,86 @@
+[
+  {
+    "id": "qa_001",
+    "type": "qa",
+    "input": "What is the capital of France?",
+    "expected": "Paris"
+  },
+  {
+    "id": "qa_002",
+    "type": "qa",
+    "input": "What planet is known as the Red Planet?",
+    "expected": "Mars"
+  },
+  {
+    "id": "qa_003",
+    "type": "qa",
+    "input": "What is 12 multiplied by 8?",
+    "expected": "96"
+  },
+  {
+    "id": "qa_004",
+    "type": "qa",
+    "input": "What gas do humans need to breathe?",
+    "expected": "Oxygen"
+  },
+  {
+    "id": "qa_005",
+    "type": "qa",
+    "input": "Who wrote Romeo and Juliet?",
+    "expected": "William Shakespeare"
+  },
+  {
+    "id": "class_001",
+    "type": "classification",
+    "input": "Classify the sentiment: I absolutely loved this product.",
+    "expected": "positive"
+  },
+  {
+    "id": "class_002",
+    "type": "classification",
+    "input": "Classify the sentiment: This service was terrible and frustrating.",
+    "expected": "negative"
+  },
+  {
+    "id": "class_003",
+    "type": "classification",
+    "input": "Classify the sentiment: The product arrived yesterday.",
+    "expected": "neutral"
+  },
+  {
+    "id": "instruction_001",
+    "type": "instruction_following",
+    "input": "Give exactly three programming languages.",
+    "expected": "Python, Java, C++"
+  },
+  {
+    "id": "instruction_002",
+    "type": "instruction_following",
+    "input": "Write exactly five words about software testing.",
+    "expected": "Testing finds errors before deployment."
+  },
+  {
+    "id": "summary_001",
+    "type": "summarization",
+    "input": "Summarize this: Artificial intelligence is a field of computer science that develops systems capable of performing tasks that normally require human intelligence, such as learning, reasoning, perception, and language understanding.",
+    "expected": "Artificial intelligence develops computer systems that can perform tasks requiring human-like intelligence."
+  },
+  {
+    "id": "json_001",
+    "type": "structured_output",
+    "input": "Extract the person's name and age from this text: John is 25 years old. Return JSON.",
+    "expected": {
+      "name": "John",
+      "age": 25
+    }
+  },
+  {
+    "id": "json_002",
+    "type": "structured_output",
+    "input": "Extract the product and price: The laptop costs $999. Return JSON.",
+    "expected": {
+      "product": "laptop",
+      "price": 999
+    }
+  }
+]
