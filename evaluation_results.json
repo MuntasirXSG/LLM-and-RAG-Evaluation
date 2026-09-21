@@ -1,0 +1,320 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "started_at": "2026-09-21T21:00:56.150851",
+  "summary": {
+    "model": "openai/gpt-oss-20b",
+    "total_cases": 13,
+    "exact_match_accuracy": 0.36363636363636365,
+    "average_semantic_score": 0.7281835675239563,
+    "average_correctness": 4.636363636363637,
+    "average_relevance": 4.636363636363637,
+    "average_completeness": 5.0,
+    "structured_json_validity": 1.0,
+    "average_field_accuracy": 1.0,
+    "average_structured_score": 1.0,
+    "average_latency_seconds": 0.6271090000000885,
+    "average_input_tokens": 83.23076923076923,
+    "average_output_tokens": 120.23076923076923,
+    "average_total_tokens": 203.46153846153845
+  },
+  "cases": [
+    {
+      "case_id": "qa_001",
+      "question": "What is the capital of France?",
+      "generated": "The capital of France is **Paris**.",
+      "latency_seconds": 0.43648559999928693,
+      "input_tokens": 78,
+      "output_tokens": 40,
+      "total_tokens": 118,
+      "results": {
+        "exact_match": false,
+        "semantic": {
+          "score": 0.6955719590187073,
+          "passed": false
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "The answer correctly states Paris, directly addresses the question, and provides no extraneous information."
+        }
+      }
+    },
+    {
+      "case_id": "qa_002",
+      "question": "What planet is known as the Red Planet?",
+      "generated": "The planet known as the Red Planet is **Mars**.",
+      "latency_seconds": 0.49928600000203005,
+      "input_tokens": 80,
+      "output_tokens": 45,
+      "total_tokens": 125,
+      "results": {
+        "exact_match": false,
+        "semantic": {
+          "score": 0.6190838813781738,
+          "passed": false
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "The answer correctly identifies Mars as the Red Planet, directly addresses the question, and provides no extraneous information."
+        }
+      }
+    },
+    {
+      "case_id": "qa_003",
+      "question": "What is 12 multiplied by 8?",
+      "generated": "12 multiplied by 8 equals **96**.",
+      "latency_seconds": 0.3503645000018878,
+      "input_tokens": 80,
+      "output_tokens": 51,
+      "total_tokens": 131,
+      "results": {
+        "exact_match": false,
+        "semantic": {
+          "score": 0.5063683390617371,
+          "passed": false
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "The answer correctly states the product, is directly relevant, and fully answers the question."
+        }
+      }
+    },
+    {
+      "case_id": "qa_004",
+      "question": "What gas do humans need to breathe?",
+      "generated": "Humans need **oxygen (O₂)** to breathe.  \n\n- **Why oxygen?**  \n  - Oxygen is the electron acceptor in cellular respiration. Cells use it to oxidize glucose (or other fuels) to produce ATP, the energy currency of life.  \n  - Without oxygen, cells switch to anaerobic metabolism, which is far less efficient and produces lactate, leading to fatigue and eventually organ failure.\n\n- **What about the rest of the air?**  \n  - Normal atmospheric air is about 21 % oxygen, 78 % nitrogen, and trace amounts of argon, CO₂, and other gases.  \n  - **Nitrogen** is inert and provides the bulk of the air’s volume, helping maintain the pressure and volume that our lungs and body expect.  \n  - **Carbon dioxide (CO₂)** is a waste product that must be exhaled; too much CO₂ in the blood is toxic.\n\n- **Practical implications**  \n  - Breathing air with less than ~16 % oxygen (hypoxia) can cause dizziness, confusion, and loss of consciousness.  \n  - Breathing air with more than ~23 % oxygen (hyperoxia) can be harmful over time, especially for people with lung disease or those exposed for long periods.\n\nSo, while nitrogen and other gases are part of the air we breathe, the essential gas that sustains human life is **oxygen**.",
+      "latency_seconds": 0.9563137999975879,
+      "input_tokens": 79,
+      "output_tokens": 458,
+      "total_tokens": 537,
+      "results": {
+        "exact_match": false,
+        "semantic": {
+          "score": 0.5295127630233765,
+          "passed": false
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "The answer correctly identifies oxygen as the essential gas for human respiration and provides relevant additional context."
+        }
+      }
+    },
+    {
+      "case_id": "qa_005",
+      "question": "Who wrote Romeo and Juliet?",
+      "generated": "Romeo and Juliet was written by **William Shakespeare**.",
+      "latency_seconds": 0.4255726000010327,
+      "input_tokens": 77,
+      "output_tokens": 43,
+      "total_tokens": 120,
+      "results": {
+        "exact_match": false,
+        "semantic": {
+          "score": 0.5758234262466431,
+          "passed": false
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "The answer correctly identifies William Shakespeare as the author, directly addresses the question, and provides no extraneous information."
+        }
+      }
+    },
+    {
+      "case_id": "class_001",
+      "question": "Classify the sentiment: I absolutely loved this product.",
+      "generated": "Positive",
+      "latency_seconds": 0.7296189000007871,
+      "input_tokens": 82,
+      "output_tokens": 37,
+      "total_tokens": 119,
+      "results": {
+        "exact_match": true,
+        "semantic": {
+          "score": 1.0,
+          "passed": true
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "The generated answer correctly identifies the sentiment as positive, matches the reference, and fully addresses the question."
+        }
+      }
+    },
+    {
+      "case_id": "class_002",
+      "question": "Classify the sentiment: This service was terrible and frustrating.",
+      "generated": "Negative",
+      "latency_seconds": 0.48392880000028526,
+      "input_tokens": 83,
+      "output_tokens": 58,
+      "total_tokens": 141,
+      "results": {
+        "exact_match": true,
+        "semantic": {
+          "score": 1.0000001192092896,
+          "passed": true
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "The generated answer correctly matches the reference sentiment, is directly relevant, and fully addresses the task."
+        }
+      }
+    },
+    {
+      "case_id": "class_003",
+      "question": "Classify the sentiment: The product arrived yesterday.",
+      "generated": "**Neutral**",
+      "latency_seconds": 0.47648730000219075,
+      "input_tokens": 81,
+      "output_tokens": 61,
+      "total_tokens": 142,
+      "results": {
+        "exact_match": true,
+        "semantic": {
+          "score": 0.8489736318588257,
+          "passed": true
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "Matches the reference answer exactly."
+        }
+      }
+    },
+    {
+      "case_id": "instruction_001",
+      "question": "Give exactly three programming languages.",
+      "generated": "Python, Java, C++",
+      "latency_seconds": 0.6258997000004456,
+      "input_tokens": 77,
+      "output_tokens": 133,
+      "total_tokens": 210,
+      "results": {
+        "exact_match": true,
+        "semantic": {
+          "score": 1.0,
+          "passed": true
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "The generated answer exactly matches the reference answer, providing the same three programming languages."
+        }
+      }
+    },
+    {
+      "case_id": "instruction_002",
+      "question": "Write exactly five words about software testing.",
+      "generated": "Testing guarantees software reliability everywhere.",
+      "latency_seconds": 1.064141999999265,
+      "input_tokens": 79,
+      "output_tokens": 265,
+      "total_tokens": 344,
+      "results": {
+        "exact_match": false,
+        "semantic": {
+          "score": 0.43926912546157837,
+          "passed": false
+        },
+        "llm_judge": {
+          "correctness": 1,
+          "relevance": 1,
+          "completeness": 5,
+          "reason": "Both answers are five words, satisfying the length requirement, but the generated answer does not accurately reflect the reference content about testing finding errors before deployment."
+        }
+      }
+    },
+    {
+      "case_id": "summary_001",
+      "question": "Summarize this: Artificial intelligence is a field of computer science that develops systems capable of performing tasks that normally require human intelligence, such as learning, reasoning, perception, and language understanding.",
+      "generated": "AI is a computer‑science discipline that builds systems capable of performing human‑like tasks—learning, reasoning, perception, and language understanding.",
+      "latency_seconds": 0.6895272999972804,
+      "input_tokens": 109,
+      "output_tokens": 148,
+      "total_tokens": 257,
+      "results": {
+        "exact_match": false,
+        "semantic": {
+          "score": 0.795415997505188,
+          "passed": false
+        },
+        "llm_judge": {
+          "correctness": 5,
+          "relevance": 5,
+          "completeness": 5,
+          "reason": "The generated answer accurately reflects the reference summary, stays on topic, and includes all key elements (human-like tasks such as learning, reasoning, perception, and language understanding)."
+        }
+      }
+    },
+    {
+      "case_id": "json_001",
+      "question": "Extract the person's name and age from this text: John is 25 years old. Return JSON.",
+      "generated": "```json\n{\n  \"name\": \"John\",\n  \"age\": 25\n}\n```",
+      "latency_seconds": 0.7860270999990462,
+      "input_tokens": 91,
+      "output_tokens": 67,
+      "total_tokens": 158,
+      "results": {
+        "structured": {
+          "json_valid": true,
+          "field_accuracy": 1.0,
+          "overall_score": 1.0,
+          "fields": {
+            "name": {
+              "expected": "John",
+              "generated": "John",
+              "correct": true
+            },
+            "age": {
+              "expected": 25,
+              "generated": 25,
+              "correct": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "json_002",
+      "question": "Extract the product and price: The laptop costs $999. Return JSON.",
+      "generated": "```json\n{\n  \"product\": \"laptop\",\n  \"price\": 999\n}\n```",
+      "latency_seconds": 0.6287634000000253,
+      "input_tokens": 86,
+      "output_tokens": 157,
+      "total_tokens": 243,
+      "results": {
+        "structured": {
+          "json_valid": true,
+          "field_accuracy": 1.0,
+          "overall_score": 1.0,
+          "fields": {
+            "product": {
+              "expected": "laptop",
+              "generated": "laptop",
+              "correct": true
+            },
+            "price": {
+              "expected": 999,
+              "generated": 999,
+              "correct": true
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 from app.evaluation.correctness import exact_match
 from app.evaluation.semantic import SemanticEvaluator
 from app.evaluation.judge import LLMJudge
+from app.evaluation.structured import structured_output_evaluate
 
-# using llm as a judge concept 
+
 class Evaluator:
 
     def __init__(self, llm):
@@ -18,48 +19,49 @@ class Evaluator:
     def evaluate_case(
         self,
         case: dict,
-        generated_answer: str,
+        generated_answer: str
     ):
 
         expected = case["expected"]
 
         results = {}
 
-        # --------------------------------
-        # Exact Match
-        # --------------------------------
+        # -----------------------------------------
+        # Normal text evaluation
+        # -----------------------------------------
 
         if isinstance(expected, str):
 
             results["exact_match"] = exact_match(
                 generated_answer,
-                expected,
+                expected
             )
-
-        # --------------------------------
-        # Semantic Similarity
-        # --------------------------------
-
-        if isinstance(expected, str):
 
             results["semantic"] = (
                 self.semantic.evaluate(
                     generated_answer,
-                    expected,
+                    expected
                 )
             )
-
-        # --------------------------------
-        # LLM Judge
-        # --------------------------------
-
-        if isinstance(expected, str):
 
             results["llm_judge"] = (
                 self.judge.evaluate(
                     question=case["input"],
                     reference=expected,
-                    generated=generated_answer,
+                    generated=generated_answer
+                )
+            )
+
+        # -----------------------------------------
+        # Structured output evaluation
+        # -----------------------------------------
+
+        elif isinstance(expected, dict):
+
+            results["structured"] = (
+                structured_output_evaluate(
+                    generated_text=generated_answer,
+                    expected=expected
                 )
             )
 
