@@ -1,0 +1,11 @@
+langchain-groq
+python-dotenv
+pydantic
+streamlit
+pandas
+plotly
+numpy
+scikit-learn
+pytest
+sentence
+sentence-transformers
